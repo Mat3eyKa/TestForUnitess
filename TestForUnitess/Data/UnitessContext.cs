@@ -7,7 +7,7 @@ namespace TestForUnitess.Data
     {
         public UnitessContext(DbContextOptions<UnitessContext> options)
             : base(options) => Database.EnsureCreated();
-        public DbSet<Person> Events { get; set; }
+        public DbSet<Person> Persons { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

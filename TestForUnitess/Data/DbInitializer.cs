@@ -7,10 +7,10 @@ namespace TestForUnitess.Data
     {
         public static void Initialize(UnitessContext context)
         {
-            if (context.Events.Any())
+            if (context.Persons.Any())
                 return;
 
-            context.Events.AddRange(new Person[]
+            context.Persons.AddRange(new Person[]
             {
                 new Person {Name = "Матвей", Surname = "Лемешев1" },
                 new Person {Name = "Матвей", Surname = "Лемешев2" },

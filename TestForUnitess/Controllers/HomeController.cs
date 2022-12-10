@@ -17,13 +17,13 @@ namespace TestForUnitess.Controllers
         public IQueryable<Person> Get(int start, int end)
         {
             if (start is 0 && end is 0)
-                return db.Events;
+                return db.Persons;
             if (start > end)
                 (start, end) = (end, start);
             start--;
             if (start < 1)
-                return db.Events.Take(end);
-            return db.Events.Skip(start).Take(end - start);
+                return db.Persons.Take(end);
+            return db.Persons.Skip(start).Take(end - start);
         }
     }
 }
